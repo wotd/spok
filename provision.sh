@@ -6,9 +6,15 @@ dpkg -s npm &> /dev/null || {
 #Install npm and nodejs IF npm is not installed
 apt-get -y install nodejs npm
 #creating node symbolic link
-ln -s /usr/bin/nodejs /usr/bin/node 
+ln -s /usr/bin/nodejs /usr/bin/node
 }
 
 command -v hubot &> /dev/null || {
-npm install -g hubot coffee-script
+#npm install -g hubot coffee-script
+#npm upgrade...
+npm install -g npm
+npm install -g yo generator-hubot
+#mkdir /myhubot
+#cd /myhubot
+#yo hubot
 }
